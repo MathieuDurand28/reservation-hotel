@@ -1,6 +1,7 @@
 package org.azardhel;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.UUID;
 
 public class Reservation {
@@ -17,15 +18,40 @@ public class Reservation {
         this.chambre = chambre;
         this.dateArrivee = dateArrivee;
         this.dateDepart = dateDepart;
+        if (dateDepart.isBefore(dateArrivee)) {
+            throw new IllegalArgumentException("La date de départ ne peut pas être avant la date d’arrivée.");
+        }
     }
 
-    public Double calculerPrixTotal()
+    public double calcTotalPrice()
     {
-        return 0.0;
+        long daysBetween = ChronoUnit.DAYS.between(dateArrivee,dateDepart);
+        return chambre.getPrix() * daysBetween;
     }
 
-    public void getAllInfos()
+    public Chambre getChambre()
     {
-        System.out.println(client.getNom()+" "+client.getPrenom()+" a réservé la "+chambre.getNomDeChambre()+" au prix de "+chambre.getPrix()+" par nuit.");
+        return chambre;
+    }
+
+    public LocalDate getDateDepart()
+    {
+        return dateDepart;
+    }
+
+    public LocalDate getDateArrivee()
+    {
+        return dateArrivee;
+    }
+
+    @Override
+    public String toString() {
+        return "****************\n" +
+                client.getNom() + " " + client.getPrenom() +
+                " a réservé la " + chambre.getNomDeChambre() +
+                " du " + dateArrivee + " au " + dateDepart + "\n" +
+                "pour un prix total de " + String.format("%.2f", calcTotalPrice()) + " € (" +
+                String.format("%.2f",chambre.getPrix()) + " € par jour)\n" +
+                "****************";
     }
 }

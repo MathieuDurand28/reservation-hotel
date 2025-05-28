@@ -5,8 +5,7 @@ import java.util.UUID;
 public class Chambre {
     private final UUID id;
     private final TypeDeChambre type;
-    private  double prixParNuit;
-    private boolean estDisponible;
+    private boolean isDisponible;
 
     public Chambre(TypeDeChambre type)
     {
@@ -14,9 +13,13 @@ public class Chambre {
         this.type = type;
     }
 
-    public boolean Disponible()
+    public boolean estDisponible()
     {
-        return false;
+        return isDisponible;
+    }
+
+    public void setDisponible(boolean dispo) {
+        this.isDisponible = dispo;
     }
 
     public String getNomDeChambre()
@@ -27,5 +30,23 @@ public class Chambre {
     public double getPrix()
     {
         return this.type.getPrixParNuit();
+    }
+
+    @Override
+    public String toString() {
+        return "Chambre " + id + " (" + getNomDeChambre() + " - " + getPrix() + " €)";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Chambre chambre = (Chambre) o;
+        return id.equals(chambre.id); // compare les UUID
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
     }
 }
