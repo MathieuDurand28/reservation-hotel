@@ -18,6 +18,16 @@ public class Chambre {
         return isDisponible;
     }
 
+    public UUID getId()
+    {
+        return id;
+    }
+
+    public TypeDeChambre getType()
+    {
+        return type;
+    }
+
     public void setDisponible(boolean dispo) {
         this.isDisponible = dispo;
     }

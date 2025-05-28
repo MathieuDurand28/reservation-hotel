@@ -29,6 +29,21 @@ public class Reservation {
         return chambre.getPrix() * daysBetween;
     }
 
+    public UUID getId()
+        {
+        return id;
+        }
+
+    public UUID getClientId()
+    {
+        return client.getId();
+    }
+
+    public UUID getChambreId()
+    {
+        return chambre.getId();
+    }
+
     public Chambre getChambre()
     {
         return chambre;
