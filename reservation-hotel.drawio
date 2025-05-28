@@ -71,16 +71,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="PYG8eQ7FKiv1TOtpOL6Z-6" value="ReservationService" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="540" y="280" width="280" height="240" as="geometry" />
-        </mxCell>
-        <mxCell id="PYG8eQ7FKiv1TOtpOL6Z-7" value="&lt;div&gt;- reservation: Reservation&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PYG8eQ7FKiv1TOtpOL6Z-6">
-          <mxGeometry y="26" width="280" height="34" as="geometry" />
+          <mxGeometry x="540" y="280" width="280" height="206" as="geometry" />
         </mxCell>
         <mxCell id="PYG8eQ7FKiv1TOtpOL6Z-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="PYG8eQ7FKiv1TOtpOL6Z-6">
-          <mxGeometry y="60" width="280" height="8" as="geometry" />
+          <mxGeometry y="26" width="280" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="PYG8eQ7FKiv1TOtpOL6Z-9" value="&lt;div&gt;+ isRoomsInConflict()(deux clients même chambre)&lt;/div&gt;&lt;div&gt;+isReservationDateOnAnother()(2 réservations se chevauchent)&lt;/div&gt;&lt;div&gt;+ isAvailableOnDate()(chambre libre sur les dates de reservation)&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PYG8eQ7FKiv1TOtpOL6Z-6">
-          <mxGeometry y="68" width="280" height="172" as="geometry" />
+        <mxCell id="PYG8eQ7FKiv1TOtpOL6Z-9" value="&lt;div&gt;+ isRoomsInConflict()(deux clients même chambre)&lt;/div&gt;&lt;div&gt;+isReservationDateOnAnother()(2 réservations se chevauchent)&lt;/div&gt;&lt;div&gt;+ isAvailableOnDate()(chambre libre sur les dates de reservation)&lt;/div&gt;&lt;div&gt;+ createReservation()&lt;/div&gt;&lt;div&gt;+ ShowReservation()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PYG8eQ7FKiv1TOtpOL6Z-6">
+          <mxGeometry y="34" width="280" height="172" as="geometry" />
         </mxCell>
         <mxCell id="PYG8eQ7FKiv1TOtpOL6Z-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.302;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="h52rlHnmPMz8dH0riewW-2" target="PYG8eQ7FKiv1TOtpOL6Z-9">
           <mxGeometry relative="1" as="geometry">
