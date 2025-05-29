@@ -30,6 +30,7 @@ public class DatabaseManager {
                 CREATE TABLE IF NOT EXISTS chambre (
                     id UUID PRIMARY KEY,
                     type VARCHAR(100),
+                    libelle VARCHAR(100),
                     prix DOUBLE
                 );
                 """);

@@ -7,8 +7,12 @@ public class Chambre {
     private final TypeDeChambre type;
     private boolean isDisponible;
 
-    public Chambre(TypeDeChambre type)
-    {
+
+    public Chambre(UUID id, TypeDeChambre type) {
+        this.id = id;
+        this.type = type;
+    }
+    public Chambre(TypeDeChambre type) {
         this.id = UUID.randomUUID();
         this.type = type;
     }

@@ -23,6 +23,18 @@ public class Reservation {
         }
     }
 
+    public Reservation(UUID id, Client client, Chambre chambre, LocalDate dateArrivee, LocalDate dateDepart) {
+        this.id = id;
+        this.client = client;
+        this.chambre = chambre;
+        this.dateArrivee = dateArrivee;
+        this.dateDepart = dateDepart;
+
+        if (dateDepart.isBefore(dateArrivee)) {
+            throw new IllegalArgumentException("La date de départ ne peut pas être avant la date d’arrivée.");
+        }
+    }
+
     public double calcTotalPrice()
     {
         long daysBetween = ChronoUnit.DAYS.between(dateArrivee,dateDepart);
@@ -37,6 +49,11 @@ public class Reservation {
     public UUID getClientId()
     {
         return client.getId();
+    }
+
+    public Client getClient()
+    {
+        return client;
     }
 
     public UUID getChambreId()

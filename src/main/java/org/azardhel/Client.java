@@ -8,12 +8,17 @@ public class Client {
     private final String prenom;
     private final String email;
 
-    public Client(String nom, String prenom, String email)
-    {
-     this.id = UUID.randomUUID();
-     this.nom = nom;
-     this.prenom = prenom;
-     this.email = email;
+    public Client(UUID id, String nom, String prenom, String email) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+    }
+    public Client(String nom, String prenom, String email) {
+        this.id = UUID.randomUUID();
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
     }
 
     public String getNom()
